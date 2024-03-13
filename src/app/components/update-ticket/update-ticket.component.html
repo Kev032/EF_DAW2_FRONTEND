@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h3 class="text-center mb-4">Edición de Tickets</h3>
+      <form (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+
+        <div class="form-group">
+          <label for="asunto">Title:</label>
+          <input type="text" class="form-control" id="title"  [(ngModel)]="ticket.title" name="asunto" required>
+          <div class="invalid-feedback">El campo Asunto es obligatorio.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="asunto">Description:</label>
+          <input type="text" class="form-control" id="description" [(ngModel)]="ticket.description" name="description" required>
+          <div class="invalid-feedback">El campo Asunto es obligatorio.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="kind">Kind:</label>
+          <input type="text" class="form-control" id="kind" [(ngModel)]="ticket.kind.name" name="kind" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="user">User:</label>
+          <input type="text" class="form-control" id="user" [(ngModel)]="ticket.user.name" name="user" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="project">Project:</label>
+          <input type="text" class="form-control" id="project" [(ngModel)]="ticket.project.name" name="project" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <input type="text" class="form-control" id="category" [(ngModel)]="ticket.category.name" name="category" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority:</label>
+          <input type="text" class="form-control" id="priority" [(ngModel)]="ticket.priority.name" name="priority" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <input type="text" class="form-control" id="status" [(ngModel)]="ticket.status.name" name="status" disabled>
+        </div>
+
+        <button type="submit" class="btn btn-success">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

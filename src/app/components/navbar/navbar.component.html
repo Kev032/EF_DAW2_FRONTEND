@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" fxLayout="row">
+  <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>diversity_3</mat-icon>
+  </a>
+  <span>Inicio</span>
+  <div class="right-items">
+    <div>
+      <a [routerLink]="'/ticket'" mat-icon-button class="example-icon favorite-icon" aria-label="Tickets">
+        Tickets
+      </a>
+      <a [routerLink]="'/user'" mat-icon-button class="example-icon favorite-icon mr20 ml70" aria-label="Usuarios">
+        Usuarios
+      </a>
+    </div>
+  </div>
+</mat-toolbar>

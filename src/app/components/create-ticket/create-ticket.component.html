@@ -1,0 +1,80 @@
+<div class="col-md-6" offset-md-3>
+  <h3 class="text-center">Registro de Usuarios</h3>
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label>Title : </label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="ticket.title" name="title">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Description : </label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="ticket.description" name="description">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Kind : </label>
+      <select class="form-control" id="kind" [(ngModel)]="ticket.kind.idKind" name="kind">
+        <option *ngFor="let kind of kinds" [value]="kind.idKind">{{kind.name}}</option>
+      </select>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>User: </label>
+      <select class="form-control" id="user" [(ngModel)]="ticket.user.idUser" name="user">
+        <option *ngFor="let user of users" [value]="user.idUser">
+          {{user.name}}</option>
+      </select>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Project: </label>
+      <select class="form-control" id="project" [(ngModel)]="ticket.project.idProject" name="project">
+        <option *ngFor="let project of projects" [value]="project.idProject">
+          {{project.name}}</option>
+      </select>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Category: </label>
+      <select class="form-control" id="category" [(ngModel)]="ticket.category.idCategory" name="category">
+        <option *ngFor="let category of categories" [value]="category.idCategory">
+          {{category.name}}</option>
+      </select>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Priority: </label>
+      <select class="form-control" id="priority" [(ngModel)]="ticket.priority.idPriority" name="priority">
+        <option *ngFor="let priority of priorities" [value]="priority.idPriority">
+          {{priority.name}}</option>
+      </select>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Status: </label>
+      <select class="form-control" id="status" [(ngModel)]="ticket.status.idStatus" name="status">
+        <option *ngFor="let status of status" [value]="status.idStatus">
+          {{status.name}}</option>
+      </select>
+    </div>
+
+    <br>
+
+    <button class="btn btn-success">Guardar</button>
+  </form>
+</div>
